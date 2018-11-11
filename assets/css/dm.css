@@ -1,0 +1,129 @@
+@font-face {
+    font-family: moria;
+    src: url(../fonts/Moria.TTF);
+}
+
+@font-face {
+    font-family: magic;
+    src: url(../fonts/MagicMedieval.ttf);
+}
+
+@font-face {
+    font-family: dragon;
+    src: url(../fonts/Talon.ttf);
+}
+
+/* Body styling */
+body {
+    background-image: url(../images/screenBG.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.nav-icon {
+    width: 5rem;
+}
+
+.navbar {
+    font-family: moria;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* Text style */
+h1 {
+    font-family: moria;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 3px 2px black;
+}
+
+h2 {
+    font-family: moria;
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    margin-top: 0.5rem;
+}
+
+h3 {
+    font-family: magic;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+label {
+    color: white;
+    font-family: magic;
+}
+
+/* element styling */
+.jumbotron {
+    background-color: white;
+    padding: 0.25rem;
+}
+
+#diceRow {
+    background-color: #666;
+    opacity: 0.9;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    margin-left: 0.75rem;
+}
+
+#rollTotal {
+    font-family: dragon;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#rolls {
+    font-family: dragon;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+.creator {
+    text-align: center;
+}
+
+.results {
+    margin-left: 0.75rem;
+}
+
+.form-control {
+    margin: auto;
+    width: 75%;
+}
+
+/* Buttons */
+.btn {
+    margin: 0.25rem;
+    background: transparent;
+}
+
+
+.create-btn {
+    background-color: maroon;
+    font-family: moria;
+    color: white;
+    text-shadow: 2px 1px #666;
+    font-size: 1.2rem;
+}
+
+#clear {
+    font-family: dragon;
+    font-size: 1.5rem;
+    margin-top: 5%;
+}
+
+.diceRoll {
+    padding: 0rem 1rem;
+    margin: -0.5rem 0rem;
+}

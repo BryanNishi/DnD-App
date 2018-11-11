@@ -1,0 +1,50 @@
+body {
+    background-image: url(../images/monsterBG.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    text-shadow: 2px 2px black;
+}
+
+.nav-icon {
+    width: 5rem;
+}
+
+@font-face {
+    font-family: moria;
+    src: url(../fonts/Moria.TTF);
+}
+
+@font-face {
+    font-family: magic;
+    src: url(../fonts/MagicMedieval.ttf);
+}
+
+.navbar {
+    font-family: moria;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-family: moria;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    
+}
+
+.features {
+    font-family: magic;
+    color: white;
+    font-size: 2rem;
+}
+
+.jumbotron {
+    opacity: 0.9;
+    background-color: #666;
+    padding: 2rem 2rem;
+}
+
+.btn{
+    margin: 0.25rem;
+}
