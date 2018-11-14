@@ -43,6 +43,7 @@ body {
     color: #bbb;
 }
 
+
 /* Text style */
 h1 {
     font-family: moria;
@@ -61,22 +62,40 @@ h2 {
     margin-top: 0.5rem;
 }
 
+label {
+    font-family: magic;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: -1%;
+}
+
 /* element styling */
 .createStart {
     text-align: center;
 }
 
 .jumbotron {
-    padding: 0rem;
     background-color: #333;
     opacity: 0.9;
-    margin: 1rem;
+    margin: 2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin: 0rem 1rem;
 }
 
 /* Buttons */
-.btn {
+.sl-btns {
     margin: 0.25rem;
     background: transparent;
+}
+
+#confirm {
+    background-color: maroon;
+    font-family: moria;
+    color: white;
 }
 
 .btn:hover {
@@ -94,3 +113,4 @@ h2 {
     font-size: 1.5rem;
     box-shadow: 2px 2px black;
 }
+

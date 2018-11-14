@@ -61,18 +61,67 @@ h2 {
     margin-top: 0.5rem;
 }
 
+h3 {
+    font-family: magic;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+label {
+    color: white;
+    font-family: magic;
+}
+
 /* element styling */
-.createStart {
+#diceRow {
+    background-color: #666;
+    opacity: 0.9;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    margin-left: 0.75rem;
+}
+
+#rollTotal {
+    font-family: dragon;
+    font-size: 3rem;
+    text-align: center;
+    background-color: white;
+    padding: 0.25rem;
+}
+
+#rolls {
+    font-family: dragon;
+    font-size: 1rem;
+    text-align: center;
+    background-color: white;
+    padding: 0.25rem;
+}
+
+.creator {
     text-align: center;
 }
 
-.jumbotron {
-    padding: 0rem;
-    background-color: #333;
-    opacity: 0.9;
-    margin: 1rem;
+.results {
+    margin-left: 0.75rem;
 }
 
+#multi {
+    margin: auto;
+    width: 75%;
+}
+
+form {
+    font-size: 1.5rem;
+    text-shadow: 2px 1px black;
+}
+
+.jumbotron{
+    padding: 0.25rem;
+    background-color: rgb(65, 40, 46);
+    opacity: 0.9;
+}
 /* Buttons */
 .btn {
     margin: 0.25rem;
@@ -80,7 +129,6 @@ h2 {
 }
 
 .btn:hover {
-    color: black;
     text-shadow: 0rem 0rem 1rem white;
     opacity: 0.9;
     box-shadow: 1px 1px 2rem 0.1rem #666;
@@ -88,9 +136,25 @@ h2 {
 
 .create-btn {
     background-color: maroon;
-    font-family: magic;
+    font-family: moria;
     color: white;
     text-shadow: 2px 1px #666;
+    font-size: 1.2rem;
+}
+
+#clear {
+    font-family: dragon;
     font-size: 1.5rem;
-    box-shadow: 2px 2px black;
+    margin-top: 5%;
+}
+
+.diceRoll {
+    padding: 0rem 1rem;
+    margin: -0.5rem 0rem;
+}
+
+
+/* Char Sheet */
+img {
+    width: 100%;
 }

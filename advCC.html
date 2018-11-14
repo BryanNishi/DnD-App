@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/advCC.css">
+    <link rel="icon" href="assets/images/dice-d20.png">
+    <title>DMs DB</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img class="nav-icon" src="./assets/images/dice-d20.png">
+        <a class="navbar-brand" href="index.html">DM's Database</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dm.html">DM Screen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="monster.html">Monster Manual</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="create.html">Character Creator <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lore.html">Lore Generator</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Extras
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="dice.html">Dice Roller</a>
+                        <a class="dropdown-item" href="#">TBD</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <button class="btn btn-outline-danger sl-btns my-2 my-sm-0"> Save </button>
+            <button class="btn btn-outline-success sl-btns my-2 my-sm-0"> Load </button>
+        </div>
+    </nav>
+
+    <!-- Character Creation Form -->
+
+    <h1>Basic Character Creator</h1>
+    <div class="row">
+        <div class="col-8">
+            <div class="jumbotron">
+                <div class="createForm">
+                    <form>
+                        <div class="row">
+                            <!-- Character Main Choices -->
+                            <div class="form-group">
+                                <label for="characterName">Character Name</label>
+                                <input class="form-control" id="characterName">
+                            </div>
+                            <div class="form-group">
+                                <label for="charClass">Class</label>
+                                <select class="form-control" id="charClass">
+                                    <option selected>Choose a Class</option>
+                                    <option value="Barbarian">Barbarian</option>
+                                    <option value="Bard">Bard</option>
+                                    <option value="Cleric">Cleric</option>
+                                    <option value="Druid">Druid</option>
+                                    <option value="Fighter">Fighter</option>
+                                    <option value="Monk">Monk</option>
+                                    <option value="Paladin">Paladin</option>
+                                    <option value="Ranger">Ranger</option>
+                                    <option value="Rogue">Rogue</option>
+                                    <option value="Scorcerer">Scorcerer</option>
+                                    <option value="Warlock">Warlock</option>
+                                    <option value="Wizard">Wizard</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="charLevel">Level</label>
+                                <select class="form-control" id="charLevel">
+                                    <option value="1" selected="selected">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="charRace">Race</label>
+                                <select class="form-control" id="charRace">
+                                    <option selected>Choose a Race</option>
+                                    <option value="Dragonborn">Dragonborn</option>
+                                    <option value="Dwarf">Dwarf</option>
+                                    <option value="Elf">Elf</option>
+                                    <option value="Gnome">Gnome</option>
+                                    <option value="Half-Elf">Half-Elf</option>
+                                    <option value="Half-Orc">Half-Orc</option>
+                                    <option value="Halfling">Halfling</option>
+                                    <option value="Human">Human</option>
+                                    <option value="Tiefling">Tiefling</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="charSubRace">Subrace</label>
+                                <select class="form-control" id="charSubRace">
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Ability Scores -->
+                        <div class="row" id="abilityScores">
+                            <div class="">
+                                <button class="btn diceRoll">Roll Stats</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="Str">Strength</label>
+                                <select class="form-control abilityScore" id="Str">
+                                    <option selected>Roll</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Dex">Dexterity</label>
+                                <select class="form-control abilityScore" id="Dex">
+                                    <option selected>Roll</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Con">Constitution</label>
+                                <select class="form-control abilityScore" id="Con">
+                                    <option selected>Roll</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Int">Intelligence</label>
+                                <select class="form-control abilityScore" id="Int">
+                                    <option selected>Roll</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Wis">Wisdom</label>
+                                <select class="form-control abilityScore" id="Wis">
+                                    <option selected>Roll</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Cha">Charisma</label>
+                                <select class="form-control abilityScore" id="Cha">
+                                    <option selected>Roll</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Selection Cards -->
+        <div class="col-2" id="selectionCard">
+    
+        </div>
+
+        <!-- Descriptions Section -->
+        <div class="col-12" id="description">
+            <div class="jumbotron">
+                <h2>Character Summary</h2>
+                <div class="desc"></div>
+                <div class="charSheet">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class=btn id="confirm">Create Character Sheet</button>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="./assets/js/advCC.js"></script>
+
+</html>
