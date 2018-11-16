@@ -76,64 +76,99 @@ $(document).ready(function reset() {
                     var a = $("<option value=" + subraces[0].dragon[j] + ">" + subraces[0].dragon[j] + "</option>");
                     $("#charSubRace").append(a);
                 }
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/dragonborn.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Dragonborn</h5><p class="card-text"></p></div></div>')
+                $("#raceCard").html(raceCard);
                 break;
             case "Dwarf":
                 for (var j = 0; j < subraces[0].dwarf.length; j++) {
                     var a = $("<option value=" + subraces[0].dwarf[j] + ">" + subraces[0].dwarf[j] + "</option>");
                     $("#charSubRace").append(a);
                 }
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/dwarf.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Dwarf</h5><p class="card-text"></p></div></div>')
+                $("#raceCard").html(raceCard);
                 break;
             case "Elf":
                 for (var j = 0; j < subraces[0].elf.length; j++) {
                     var a = $("<option value=" + subraces[0].elf[j] + ">" + subraces[0].elf[j] + "</option>");
                     $("#charSubRace").append(a);
                 }
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/elf.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Elf</h5><p class="card-text"></p></div></div>')
+                $("#raceCard").html(raceCard);
                 break;
             case "Gnome":
                 for (var j = 0; j < subraces[0].gnome.length; j++) {
                     var a = $("<option value=" + subraces[0].gnome[j] + ">" + subraces[0].gnome[j] + "</option>");
                     $("#charSubRace").append(a);
                 }
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/gnome.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Gnome</h5><p class="card-text"></p></div></div>')
+                $("#raceCard").html(raceCard);
                 break;
             case "Halfling":
                 for (var j = 0; j < subraces[0].halfling.length; j++) {
                     var a = $("<option value=" + subraces[0].halfling[j] + ">" + subraces[0].halfling[j] + "</option>");
                     $("#charSubRace").append(a);
                 }
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/halfling.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Halfling</h5><p class="card-text"></p></div></div>')
+                $("#raceCard").html(raceCard);
                 break;
             case "Half-Elf":
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/half-elf.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Half-Elf</h5><p class="card-text">Hit Die: d12, Primary Ability: Strength, Saving Throw Proficiencies: Strength & Constitution, Armor and Weapon Proficiencies: Light and medium armor, shields, simple and martial weapons</p></div></div>')
+                $("#raceCard").html(raceCard);
+                break;
             case "Half-Orc":
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/half-orc.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Half-Orc</h5><p class="card-text">Hit Die: d12, Primary Ability: Strength, Saving Throw Proficiencies: Strength & Constitution, Armor and Weapon Proficiencies: Light and medium armor, shields, simple and martial weapons</p></div></div>')
+                $("#raceCard").html(raceCard);
+                break;
             case "Human":
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/human.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Human</h5><p class="card-text">Hit Die: d12, Primary Ability: Strength, Saving Throw Proficiencies: Strength & Constitution, Armor and Weapon Proficiencies: Light and medium armor, shields, simple and martial weapons</p></div></div>')
+                $("#raceCard").html(raceCard);
+                break;
             case "Tiefling":
-                console.log("no options");
-                var none = "No Options";
-                var a = $("<option value='none'>" + none + "</option>");
-                $("#charSubRace").html("a");;
+                var raceCard = $('<div class="card"><img class="card-img-top" src="assets/images/tiefling.jpg" alt="Card image cap"><div class="card-body"><h5 class="card-title">Tiefling</h5><p class="card-text">Hit Die: d12, Primary Ability: Strength, Saving Throw Proficiencies: Strength & Constitution, Armor and Weapon Proficiencies: Light and medium armor, shields, simple and martial weapons</p></div></div>')
+                $("#raceCard").html(raceCard);
         }
 
     });
 
     // Dice Roll Function
     var rolls = [];
-
+    //initial dice roll to fill rolls array
     $(".diceRoll").on("click", function () {
         event.preventDefault();
+        rolls = [];
         $("#Str").empty();
         $("#Dex").empty();
         $("#Con").empty();
         $("#Int").empty();
         $("#Wis").empty();
         $("#Cha").empty();
-
+        //for loop to append rolled values to div
         for (i = 0; i < 6; i++) {
             var result = Math.floor((Math.random() * 18) + 1);
             rolls.push(result);
             var a = $("<option value=" + result + ">" + result + "</option>");
-            console.log(a);
+
             $(".abilityScore").append(a);
+
         }
+        var b = $("<option selected>Choose a Value</option>");
+        $(".abilityScore").prepend(b);
+
         console.log("Rolls", rolls);
     })
+    //user assigns value for stat, value is removed from options
+    $(".abilityScore").change(function () {
+        console.log("ability score", this.value);
+        var a = parseInt(this.value);
+        var b = rolls.indexOf(a);
+        console.log(b);
+        if (b > -1) {
+            rolls.splice(b, 1);
+        }
+        console.log("New Rolls", rolls);
+
+    });
+
 
     function playerChar(name, charClass, lvl, race, subrace, xp, xpToLvl, alignment, diety, languages, size, gender, charAge, height, weight, eyes,
         hair, profBonus, inspiration, str, dex, con, int, wis, cha, carried, encumb, hvyEncumb, drag, ac, init, speed, hpMax, hpCurr, hitDice,

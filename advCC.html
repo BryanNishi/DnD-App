@@ -9,6 +9,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/advCC.css">
     <link rel="icon" href="assets/images/dice-d20.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>DMs DB</title>
 </head>
 
@@ -53,7 +54,7 @@
 
     <!-- Character Creation Form -->
 
-    <h1>Basic Character Creator</h1>
+    <h1>Advanced Character Creator</h1>
     <div class="row">
         <div class="col-8">
             <div class="jumbotron">
@@ -65,6 +66,40 @@
                                 <label for="characterName">Character Name</label>
                                 <input class="form-control" id="characterName">
                             </div>
+                            <button class="btn" id="charNameRandom"><i class="fas fa-random"></i></button>
+                            <div class="form-group">
+                                <label for="playerName">Player Name</label>
+                                <input class="form-control" id="playerName">
+                            </div>
+                            <div class="form-group">
+                                <label for="characterAge">Age</label>
+                                <input class="form-control" id="characterAge">
+                            </div>
+                            <div class="form-group">
+                                <label for="characterGender">Gender</label>
+                                <input class="form-control" id="characterGender">
+                            </div>
+                            <div class="form-group">
+                                <label for="characterHeight">Height</label>
+                                <input class="form-control" id="characterHeight">
+                            </div>
+                            <div class="form-group">
+                                <label for="characterWeight">Weight</label>
+                                <input class="form-control" id="characterWeight">
+                            </div>
+                            <div class="form-group">
+                                <label for="characterHair">Hair Color</label>
+                                <input class="form-control" id="characterHair">
+                            </div>
+                            <div class="form-group">
+                                <label for="characterEye">Eye Color</label>
+                                <input class="form-control" id="characterEye">
+                            </div>
+                            <div class="form-group">
+                                <label for="characterSkin">Skin Color</label>
+                                <input class="form-control" id="characterSkin">
+                            </div>
+
                             <div class="form-group">
                                 <label for="charClass">Class</label>
                                 <select class="form-control" id="charClass">
@@ -133,7 +168,7 @@
                         <!-- Ability Scores -->
                         <div class="row" id="abilityScores">
                             <div class="">
-                                <button class="btn diceRoll">Roll Stats</button>
+                                <button class="btn diceRoll"><i class="fas fa-dice"></i></button>
                             </div>
                             <div class="form-group">
                                 <label for="Str">Strength</label>
@@ -180,7 +215,8 @@
 
         <!-- Selection Cards -->
         <div class="col-2" id="selectionCard">
-    
+        </div>
+        <div class="col-2" id="raceCard">
         </div>
 
         <!-- Descriptions Section -->
