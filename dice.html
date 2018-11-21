@@ -50,81 +50,74 @@
             <button class="btn btn-outline-success sl-btns my-2 my-sm-0"> Load </button>
         </div>
     </nav>
+    <div class="container" id="diceRow">
 
-    <!-- DICE ROLLER -->
-    <div class="row">
-        <div class="col-2" id="diceRow">
-            <h3>Click to Roll:</h3>
-            <div class="row">
-                <div class="row">
-                    <div class="col-6">
-                        <h2>D4</h2>
-                        <button class="btn diceRoll" value="4"><img src="assets/images/d4.png" class="img-fluid"></button>
-                    </div>
-                    <div class="col-6">
-                        <h2>D6</h2>
-                        <button class="btn diceRoll" value="6"><img src="assets/images/d6.png" class="img-fluid"></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h2>D8</h2>
-                        <button class="btn diceRoll" value="8"><img src="assets/images/d8.png" class="img-fluid"></button>
-                    </div>
-                    <div class="col-6">
-                        <h2>D10</h2>
-                        <button class="btn diceRoll" value="10"><img src="assets/images/d10.png" class="img-fluid"></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h2>D12</h2>
-                        <button class="btn diceRoll" value="12"><img src="assets/images/d12.png" class="img-fluid"></button>
-                    </div>
-                    <div class="col-6">
-                        <h2>D20</h2>
-                        <button class="btn diceRoll" value="20"><img src="assets/images/d20.png" class="img-fluid"></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-7">
-                        <h2>D100</h2>
-                        <button class="btn diceRoll" value="100"><img src="assets/images/d100.png" class="img-fluid"></button>
+        <!-- DICE ROLLER -->
 
-                    </div>
-                    <div class="col-5">
-                        <label for="multi">Multiplier:</label>
-                        <select class="form-control" id="multi">
-                            <option value="1" selected="selected">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+        <h3>Click to Roll:</h3>
+        <div class="row">
+            <div class="col-sm">
+                <h2>D4</h2>
+                <button class="btn diceRoll" value="4"><img src="assets/images/d4.png" class="img-fluid"></button>
+            </div>
+            <div class="col-sm">
+                <h2>D6</h2>
+                <button class="btn diceRoll" value="6"><img src="assets/images/d6.png" class="img-fluid"></button>
+            </div>
+            <div class="col-sm">
 
-                        <button class="btn btn-outline-warning" id="clear">Clear</button>
-                    </div>
-                </div>
-                <div class="row results">
-                    <div class="col-6">
-                        <h2>Rolls</h2>
-                        <div class="jumbotron" id="rolls">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <h2>Total</h2>
-                        <div class="jumbotron" id="rollTotal">
-                        </div>
-                    </div>
-                </div>
+
+                <h2>D8</h2>
+                <button class="btn diceRoll" value="8"><img src="assets/images/d8.png" class="img-fluid"></button>
+            </div>
+            <div class="col-sm">
+                <h2>D10</h2>
+                <button class="btn diceRoll" value="10"><img src="assets/images/d10.png" class="img-fluid"></button>
+            </div>
+            <div class="col-sm">
+                <h2>D12</h2>
+                <button class="btn diceRoll" value="12"><img src="assets/images/d12.png" class="img-fluid"></button>
+            </div>
+            <div class="col-sm">
+                <h2>D20</h2>
+                <button class="btn diceRoll" value="20"><img src="assets/images/d20.png" class="img-fluid"></button>
+            </div>
+            <div class="col-sm">
+                <h2>D100</h2>
+                <button class="btn diceRoll" value="100"><img src="assets/images/d100.png" class="img-fluid"></button>
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-sm">
+                <label for="multi">Multiplier:</label>
+                <select class="form-control" id="multi">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="col-sm">
+                <h2>Rolls</h2>
+                <div class="jumbotron" id="rolls">
+                </div>
+            </div>
+            <div class="col-sm">
+                <h2>Total</h2>
+                <div class="jumbotron" id="rollTotal">
+                </div>
+            </div>
+            <div class="col-sm">
+                <button class="btn btn-outline-warning" id="clear">Clear</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="

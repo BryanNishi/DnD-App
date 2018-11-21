@@ -78,9 +78,7 @@ label {
 #diceRow {
     background-color: #666;
     opacity: 0.9;
-    padding: 1rem 1.5rem;
     text-align: center;
-    margin-left: 0.75rem;
 }
 
 #rollTotal {
@@ -93,7 +91,7 @@ label {
 
 #rolls {
     font-family: dragon;
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
     background-color: white;
     padding: 0.25rem;
@@ -117,11 +115,12 @@ form {
     text-shadow: 2px 1px black;
 }
 
-.jumbotron{
+.jumbotron {
     padding: 0.25rem;
     background-color: rgb(65, 40, 46);
     opacity: 0.9;
 }
+
 /* Buttons */
 .btn {
     margin: 0.25rem;
