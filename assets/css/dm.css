@@ -74,6 +74,12 @@ label {
     font-family: magic;
 }
 
+p{
+    font-family: magic;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 /* element styling */
 .jumbotron {
     background-color: white;
@@ -86,6 +92,7 @@ label {
     padding: 1rem 1.5rem;
     text-align: center;
     margin-left: 0.75rem;
+    position: fixed;
 }
 
 #rollTotal {
@@ -100,14 +107,6 @@ label {
     text-align: center;
 }
 
-#dice{
-    position: fixed;
-}
-
-.creator {
-    text-align: center;
-}
-
 .results {
     margin-left: 0.75rem;
 }
@@ -117,9 +116,82 @@ label {
     width: 75%;
 }
 
-#multi{
+#multi {
     margin: auto;
     width: 90%;
+}
+
+.dmScreen {
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+.abilityTitle{
+    margin: 0.25rem 0.25rem;
+}
+
+.dmTitle {
+    background-color: #666;
+}
+
+#str {
+    background-color: maroon;
+    margin: 0.25rem;
+}
+
+#strBody {
+    background-color: rgb(128, 75, 75);
+    font-family: magic;
+}
+
+#dex {
+    background-color: green;
+    margin: 0.25rem;
+}
+
+#dexBody {
+    background-color: rgb(50, 128, 75);
+    font-family: magic;
+}
+
+#con {
+    background-color: rgb(0, 0, 200);
+    margin: 0.25rem;
+}
+
+#conBody {
+    background-color: rgb(75, 75, 255);
+    font-family: magic;
+}
+
+#int {
+    background-color: purple;
+    margin: 0.25rem;
+}
+
+#intBody {
+    background-color: rgb(140, 85, 140);
+    font-family: magic;
+}
+
+#wis {
+    background-color: teal;
+    margin: 0.25rem;
+}
+
+#wisBody {
+    background-color: rgb(100, 150, 150);
+    font-family: magic;
+}
+
+#cha {
+    background-color: rgb(245, 150, 0);
+    margin: 0.25rem;
+}
+
+#chaBody {
+    background-color: rgb(250, 165, 100);
+    font-family: magic;
 }
 
 /* Buttons */

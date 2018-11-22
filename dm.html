@@ -52,87 +52,312 @@
         </div>
     </nav>
 
+
+
     <!-- DICE ROLLER -->
-    <div class="row" id="dice">
-        <div class="col-2" id="diceRow">
-            <h3>Click to Roll:</h3>
+    <div class="col-2" id="diceRow">
+        <h3>Click to Roll:</h3>
+        <div class="row">
             <div class="row">
-                <div class="row">
-                    <div class="col-6">
-                        <h2>D4</h2>
-                        <button class="btn diceRoll" value="4"><img src="assets/images/d4.png" class="img-fluid"></button>
-                    </div>
-                    <div class="col-6">
-                        <h2>D6</h2>
-                        <button class="btn diceRoll" value="6"><img src="assets/images/d6.png" class="img-fluid"></button>
-                    </div>
+                <div class="col-6">
+                    <h2>D4</h2>
+                    <button class="btn diceRoll" value="4"><img src="assets/images/d4.png" class="img-fluid"></button>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h2>D8</h2>
-                        <button class="btn diceRoll" value="8"><img src="assets/images/d8.png" class="img-fluid"></button>
-                    </div>
-                    <div class="col-6">
-                        <h2>D10</h2>
-                        <button class="btn diceRoll" value="10"><img src="assets/images/d10.png" class="img-fluid"></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <h2>D12</h2>
-                        <button class="btn diceRoll" value="12"><img src="assets/images/d12.png" class="img-fluid"></button>
-                    </div>
-                    <div class="col-6">
-                        <h2>D20</h2>
-                        <button class="btn diceRoll" value="20"><img src="assets/images/d20.png" class="img-fluid"></button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-7">
-                        <h2>D100</h2>
-                        <button class="btn diceRoll" value="100"><img src="assets/images/d100.png" class="img-fluid"></button>
-
-                    </div>
-                    <div class="col-5">
-                        <label for="multi">Multiplier:</label>
-                        <select class="form-control" id="multi">
-                            <option value="1" selected="selected">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-
-                        <button class="btn btn-outline-warning" id="clear">Clear</button>
-                    </div>
-                </div>
-                <div class="row results">
-                    <div class="col-6">
-                        <h2>Rolls</h2>
-                        <div class="jumbotron" id="rolls">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <h2>Total</h2>
-                        <div class="jumbotron" id="rollTotal">
-                        </div>
-                    </div>
+                <div class="col-6">
+                    <h2>D6</h2>
+                    <button class="btn diceRoll" value="6"><img src="assets/images/d6.png" class="img-fluid"></button>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-6">
+                    <h2>D8</h2>
+                    <button class="btn diceRoll" value="8"><img src="assets/images/d8.png" class="img-fluid"></button>
+                </div>
+                <div class="col-6">
+                    <h2>D10</h2>
+                    <button class="btn diceRoll" value="10"><img src="assets/images/d10.png" class="img-fluid"></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h2>D12</h2>
+                    <button class="btn diceRoll" value="12"><img src="assets/images/d12.png" class="img-fluid"></button>
+                </div>
+                <div class="col-6">
+                    <h2>D20</h2>
+                    <button class="btn diceRoll" value="20"><img src="assets/images/d20.png" class="img-fluid"></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7">
+                    <h2>D100</h2>
+                    <button class="btn diceRoll" value="100"><img src="assets/images/d100.png" class="img-fluid"></button>
 
-        <div class="container col-10">
-            <div class="dmScreen">
-                <h1>DM Screen</h1>
+                </div>
+                <div class="col-5">
+                    <label for="multi">Multiplier:</label>
+                    <select class="form-control" id="multi">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
 
+                    <button class="btn btn-outline-warning" id="clear">Clear</button>
+                </div>
+            </div>
+            <div class="row results">
+                <div class="col-6">
+                    <h2>Rolls</h2>
+                    <div class="jumbotron" id="rolls">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h2>Total</h2>
+                    <div class="jumbotron" id="rollTotal">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    </div>
+    <!-- DM Screen -->
+    <div class="container offset-sm-2 col-sm-10">
+        <div class="dmScreen">
+            <h1>DM Screen</h1>
+            <iframe src="./assets/images/dmScreen.pdf"width="1200" height="900"></iframe>
+            <div class="row">
+                <h2 class="col-12 dmTitle">Ability Checks</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm" id="str">
+                    <h2 class="abilityTitle">Strength</h2>
+                    <p id="strBody">
+                        Strength measures bodily power and athletic training.
+                        <br>
+                        <br>
+                        <strong>Athletics 1</strong>
+                        <br>
+                        <strong>Automatic</strong>
+                        <br>
+                        Climb a wall with plenty of handholds or a secure, knotted rope or rope ladder; swim
+                        in relatively calm water; jump a number of feet horizontally equal to half of your Strength
+                        score, or your full Strength score with a 10 foot running start; leap into the air a number of
+                        feet equal to half of (3 + your Strength modifier), or the full amount with a 10 foot running
+                        start 2
+                        <br>
+                        <strong>Easy</strong>
+                        <br>Climb a wall lacking an adequate amount of handholds, tread water in rough conditions,
+                        jump a few feet farther than you normally could; during a long jump, clear an obstacle such as
+                        a low-lying hedge or wall of height ≤a fourth of the jump’s distance
+                        <br>
+                        <strong>Moderate</strong>
+                        <br>Climb a rope dangling from a protrusion or overhang (i.e. lacking a vertical surface
+                        to brace against), swim in rough water or against a mild current
+                        <br>
+                        <strong>Hard</strong>
+                        <br>Climb a wall with very few handholds, catch yourself on a rope or other handhold in the
+                        middle or at the end of your jump, swim in violent water or against a strong current
+                        Very Hard Climb a slippery or sheer wall with little or no handholds, climb vertically along an
+                        overhang with adequate handholds, swim in stormy waters
+                        <br>
+                        <br>
+                        <strong>Feats of Strength • Other</strong>
+                        <br>
+                        <strong>Easy</strong>
+                        <br>Force open a stuck or broken door, break free from weak bindings, pull a stuck or wedged
+                        object loose
+                        <br>
+                        <strong>Moderate</strong>
+                        <br>Break through a wooden door reinforced with iron, hang on to a wagon while being
+                        dragged behind it
+                        <br>
+                        <strong>Hard</strong>
+                        <br>Break through a heavy locked or barred door, topple a stone statue
+                        <br>
+                        <strong>Very Hard</strong>
+                        <br>Break through a heavy, reinforced door such as a prison or armory door, hold a door
+                        shut against a room filling with water
+
+                    </p>
+                </div>
+                <div class="col-sm" id="dex">
+                    <h2 class="abilityTitle">Dexterity</h2>
+                    <p id="dexBody">
+                        Dexterity measures agility, reflexes, and balance.
+                        Acrobatics
+                        Easy Walk across an icy surface, stay upright in a turbulent situation, land safely on
+                        difficult terrain
+                        Moderate Walk along a narrow ledge, swing from a chandelier and land on your feet
+                        Hard Cross a wildly swaying rope bridge
+                        Very Hard Walk across a tightrope, vault over or under an enemy (through their space)
+                        Sleight of Hand
+                        Easy Perform simple acts of legerdemain such as palming a coin-sized object
+                        Contest
+                        (vs. WIS) Plant or steal an object on or from a target, conceal an object on your person
+                        Stealth 1
+                        Contest
+                        (vs. WIS) Conceal yourself from enemies, sneak past unsuspecting targets, slip away while
+                        others are distracted
+                        Pick Lock 2 • Disarm Trap 2 • Other
+                        Easy Pick a simple lock, jam a simple trap, perform a task requiring particularly dexterous
+                        hands 3
+                        Moderate Pick a typical lock, escape from tight rope bindings, securely restrain a prisoner
+                        Hard Pick an elaborate lock, disarm a trap of average complexity, steer a chariot around a
+                        tight corner
+                        Very Hard Pick a masterwork lock, disarm a complex trap, escape from locked masterwork manacles
+
+                    </p>
+                </div>
+                <div class="col-sm" id="con">
+                    <h2 class="abilityTitle">Constitution</h2>
+                    <p id="conBody">
+                        Constitution measures health, stamina, and vital force.
+                        Concentration
+                        Easy Distracting environmental stimuli such as a wave crashing over the deck of a storm-tossed
+                        ship
+                        Variable
+                        max(10,x) After taking damage make a Constitution Saving throw with a DC of either 10 or half
+                        of the damage taken, whichever is higher.
+                        Forced March 2
+                        Variable
+                        (DC 10 + x) At the end of each hour a PC must make a Constitution saving throw with a DC equal
+                        to 10 + the number of hours traveled past 8. On a failed throw the PC advances one level of
+                        exhaustion.
+                        Air
+                        A PC can hold their breath for a number of minutes equal to 1 + their Constitution modifier
+                        (minimum 30 seconds). When out of breath, a PC can survive for a number of rounds equal to
+                        their Constitution modifier before they drop to 0 hit points and begin to die.
+                        Food
+                        A PC must eat one pound of food per day in order to subsist. They can go without food for a
+                        number of days equal to 3 + their Constitution modifier (minimum 1) before they begin to
+                        starve. This day count is reset when the PC eats their fill for a day; otherwise, the PC
+                        advances one level of exhaustion at the end of each day beyond their limit.
+                        Water 3
+                        Automatic A PC drinking less than half the amount of water they require during the day advances
+                        one level of exhaustion at the end of the day, or two levels if they are already suffering from
+                        exhaustion.
+                        Moderate A PC drinking more than half the amount of water they require during the day but less
+                        than the full amount must succeed on a Constitution saving throw or advance one level of
+                        exhaustion, or two levels if they are already suffering from exhaustion.
+
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm" id="int">
+                    <h2 class="abilityTitle">Intelligence</h2>
+                    <p id="intBody">
+                        Intelligence measures mental acuity, accuracy
+                        of recall, and the ability to reason.
+                        Arcana • History • Nature • Religion
+                        Easy Recall widely known information; identify common people, places, objects, symbols, fauna,
+                        or flora
+                        Moderate Recall more obscure or specific information; identify uncommon people, places,
+                        objects, symbols, fauna, or flora
+                        Hard Recall truly esoteric or precise information; identify rare people, places, objects,
+                        symbols, fauna, or flora
+                        Very Hard Recall information that is known only by a privileged few; identify exceedingly rare
+                        people, places, objects, symbols, fauna, or flora
+                        Investigation • Other
+                        Easy Identify a particularly obvious trap or a secret or coded message left by a contact,
+                        communicate a simple idea with an intelligent creature you don’t share a language with,
+                        discover the true nature of a low-level illusion
+                        Moderate Identify a typical trap, determine time or cause of death of a recently deceased
+                        creature, estimate the material worth of an item, discover the true nature of a mid-level
+                        illusion
+                        Hard Identify a well-hidden trap, object, or area; forge a document or identify such a
+                        document, discover the true nature of a high-level illusion
+                        Very Hard Identify a magically-hidden trap, object, or area; discern the purpose and process of
+                        a complicated device or system; determine the integrity of a structure, construct, or formation
+                        and identify any exploitable weak points
+
+                    </p>
+                </div>
+                <div class="col-sm" id="wis">
+                    <h2 class="abilityTitle">Wisdom</h2>
+                    <p id="wisBody">
+                        Wisdom measures perceptiveness, intuition, and attunement with the surrounding world.
+                        Insight • Perception
+                        Easy Spot a prominent landmark or structure in the distance, hear the far-off sound of thunder
+                        signaling a coming storm, determine if a child is telling the truth
+                        Moderate Spot a natural-obscured object or feature, eavesdrop on a conversation in the next
+                        room, discern who among a cagey group is the leader, discern the intended message of a
+                        non-verbal communication
+                        Hard Spot a well-hidden object or feature, eavesdrop on a hushed conversation through a heavy
+                        door, guess at the enemy’s next action
+                        Very Hard Spot a nearly-invisible object or feature, read the lips of a creature you can see
+                        but not hear
+                        Contest
+                        (vs. CHA) Determine if someone is lying or disguising themselves or their intentions
+                        Contest
+                        (vs. DEX) Spot a creature attempting to hide, hear the movements of a hidden foe
+                        Survival
+                        Easy Follow a well-worn trail through a forest, follow the tracks of a creature through snow or
+                        mud, forage for a day’s worth of food in a plentiful area, navigate on a clear night
+                        Moderate Follow an abandoned or forgotten trail, track a creature through a forest, forage for
+                        a day’s worth of food in a sparse area, navigate on a cloudy night, predict an oncoming storm,
+                        identify the signs of nearby creatures
+                        Hard Track a creature over barren terrain, forage for a day’s worth of food in a harsh area,
+                        navigate through an alien area on a cloudy night, predict tomorrow’s weather
+                        Very Hard Track a creature after rainfall, navigate an alien area on a stormy night
+                        Animal Handling • Medicine • Other
+                        Easy Calm a domesticated animal, stabilize a dying creature outside of combat, diagnose a
+                        common ailment
+                        Moderate Calm a wild but otherwise peaceful animal, intuit an animal’s emotional state, set a
+                        broken bone, perform a complex maneuver while mounted, stabilize a dying creature in the middle
+                        of combat, diagnose an uncommon ailment
+                        Hard Intuit a hostile animal’s next action, control an untrained mount, diagnose a rare ailment
+                        Very Hard Calm a dangerous wild animal, diagnose magical and divine ailments
+
+                    </p>
+                </div>
+                <div class="col-sm" id="cha">
+                    <h2 class="abilityTitle">Charisma</h2>
+                    <p id="chaBody">
+                        Charisma measures force of personality, persuasiveness, personal magnetism, social
+                        influence, and physical attractiveness.
+                        Deception
+                        Contest
+                        (vs. WIS) Fast-talk or con someone, adopt a disguise or impersonate another creature, tell a
+                        convincing lie or otherwise hide your true intentions
+                        Intimidation
+                        Easy Scare a spineless noble in to handing over their coin purse
+                        Moderate Pry information out of an uncooperative prisoner, convince street thugs to back down
+                        from a confrontation
+                        Hard Advise a guard that it might be best to look the other way this time around, coerce an
+                        official in to signing a document
+                        Very Hard Frighten a creature larger than you, causing it to flee; stop an agitated mob in
+                        their tracks
+                        Performance
+                        Easy Routine performance such as telling a story in a tavern or around a campfire
+                        Moderate Professional performance such as an inspiring speech or an impressive musical display
+                        which may attract the attention of a local troupe and lead to regional fame
+                        Hard Memorable performance which may attract the attention of a local patron and lead to
+                        national fame
+                        Very Hard Extraordinary performance which may attract the attention of distant patrons and even
+                        extraplanar beings
+                        Persuasion
+                        Easy Convince the mayor to allow your party to help, calm a distraught person
+                        Moderate Persuade a group of highway thieves to leave in peace, convince a friendly
+                        acquaintance that you know best
+                        Hard Convince a chamberlain to let your party see the king, inspire or rally a crown of
+                        townsfolk, negotiate a peace between warring tribes
+                        Very Hard Convince a sphinx that you are worthy of the secrets it guards, assure a dragon
+                        you’re worth more alive than dead
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
