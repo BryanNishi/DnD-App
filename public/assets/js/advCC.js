@@ -169,6 +169,16 @@ $(document).ready(function reset() {
 
     });
 
+    $("#create").on("click", function () {
+        event.preventDefault();
+        data = document.getElementById('newPlayerForm');
+        formData = new FormData(data);
+
+        // Display the values
+        for (var value of formData.values()) {
+            console.log(value);
+        }
+    })
 
     function playerChar(name, charClass, lvl, race, subrace, xp, xpToLvl, alignment, diety, languages, size, gender, charAge, height, weight, eyes,
         hair, profBonus, inspiration, str, dex, con, int, wis, cha, carried, encumb, hvyEncumb, drag, ac, init, speed, hpMax, hpCurr, hitDice,
